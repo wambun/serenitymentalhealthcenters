@@ -6,21 +6,19 @@ import { Phone, Calendar } from 'lucide-react';
 const CTASection = () => {
   return (
     <section className="py-20 lg:py-28 bg-neutral-900 w-full">
-      <div className="w-full px-4 sm:px-6 lg:px-12">
-        <div className="max-w-3xl mx-auto text-center">
-          <div>
-            <span className="text-primary-400 font-medium">
-              Ready to Get Started?
-            </span>
-            <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
-              Take the First Step Toward Healing
-            </h2>
-            <p className="mt-6 text-lg text-neutral-400">
-              Our compassionate team is ready to help you on your journey to
-              mental wellness. Schedule a consultation today and discover the
-              treatment options that are right for you.
-            </p>
-          </div>
+      <div className="w-full px-4 sm:px-6 lg:px-12 xl:px-20">
+        <div className="text-center">
+          <span className="text-primary-400 font-medium">
+            Ready to Get Started?
+          </span>
+          <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
+            Take the First Step Toward Healing
+          </h2>
+          <p className="mt-6 text-lg text-neutral-400 max-w-2xl mx-auto">
+            Our compassionate team is ready to help you on your journey to
+            mental wellness. Schedule a consultation today and discover the
+            treatment options that are right for you.
+          </p>
 
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
@@ -39,7 +37,7 @@ const CTASection = () => {
             </a>
           </div>
 
-          <div className="mt-12 grid sm:grid-cols-3 gap-8">
+          <div className="mt-12 grid sm:grid-cols-3 gap-8 lg:gap-16 max-w-4xl mx-auto">
             {[
               { label: 'Insurance Accepted', value: 'Most Major Plans' },
               { label: 'Locations', value: '8+ States' },

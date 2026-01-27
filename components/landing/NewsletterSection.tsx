@@ -21,21 +21,19 @@ const NewsletterSection = () => {
 
   return (
     <section className="py-20 lg:py-28 bg-primary-500 w-full">
-      <div className="w-full px-4 sm:px-6 lg:px-12">
-        <div className="max-w-2xl mx-auto text-center">
-          <div>
-            <h2 className="text-3xl sm:text-4xl font-bold text-white">
-              Subscribe to Our Newsletter
-            </h2>
-            <p className="mt-4 text-lg text-white/80">
-              Stay informed about mental health tips, treatment updates, and
-              wellness resources delivered to your inbox.
-            </p>
-          </div>
+      <div className="w-full px-4 sm:px-6 lg:px-12 xl:px-20">
+        <div className="text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white">
+            Subscribe to Our Newsletter
+          </h2>
+          <p className="mt-4 text-lg text-white/80 max-w-xl mx-auto">
+            Stay informed about mental health tips, treatment updates, and
+            wellness resources delivered to your inbox.
+          </p>
 
           <div className="mt-8">
             {isSubmitted ? (
-              <div className="flex items-center justify-center gap-3 p-4 bg-white/10 rounded-full">
+              <div className="inline-flex items-center justify-center gap-3 p-4 bg-white/10 rounded-full">
                 <CheckCircle2 className="w-6 h-6 text-white" />
                 <span className="text-white font-medium">
                   Thank you for subscribing!
@@ -44,7 +42,7 @@ const NewsletterSection = () => {
             ) : (
               <form
                 onSubmit={handleSubmit}
-                className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto"
+                className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto"
               >
                 <input
                   type="email"
