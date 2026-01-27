@@ -1,11 +1,17 @@
-/* HealthWell-inspired color palette for Serenity Mental Health */
+/* Serenity Mental Health brand colors - Purple palette */
 const colors = {
   primary: {
-    lighter: '#6ee7a0',
-    light: '#5cdb8f',
-    main: '#46b96e',
-    dark: '#389458',
-    darker: '#2d7647',
+    50: '#f5f0f9',
+    100: '#ebe0f3',
+    200: '#d7c1e7',
+    300: '#c3a2db',
+    400: '#a577c4',
+    500: '#653C85', /* Main brand purple */
+    600: '#583473',
+    700: '#4a2c62',
+    800: '#3d2450',
+    900: '#2f1c3e',
+    950: '#21142c',
   },
   secondary: {
     lighter: '#4dd4ff',
@@ -23,15 +29,15 @@ const colors = {
   },
   neutral: {
     50: '#fafafa',
-    100: '#f7f7f7',
-    200: '#f4fbf6',
-    300: '#e5e5e5',
-    400: '#cccccc',
-    500: '#999999',
-    600: '#666666',
-    700: '#333333',
-    800: '#1a1a1a',
-    900: '#000000',
+    100: '#f5f5f5',
+    200: '#e5e5e5',
+    300: '#d4d4d4',
+    400: '#a3a3a3',
+    500: '#737373',
+    600: '#525252',
+    700: '#404040',
+    800: '#262626',
+    900: '#171717',
   },
 };
 
