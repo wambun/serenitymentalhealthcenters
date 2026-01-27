@@ -19,7 +19,7 @@ const Footer = () => {
                 alt="Serenity Mental Health"
                 width={56}
                 height={56}
-                className="h-14 w-auto brightness-0 invert"
+                className="h-14 w-auto"
               />
               <span className="text-2xl font-bold">
                 Serenity
