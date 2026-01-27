@@ -10,7 +10,9 @@
     "analyze": "cross-env ANALYZE=true next build",
     "lint": "next lint --fix --dir pages --dir app --dir components --dir lib --dir layouts --dir scripts",
     "pretty": "prettier --write .",
-    "appinfo": "node ./scripts/generateAppInfo.mjs"
+    "appinfo": "node ./scripts/generateAppInfo.mjs",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui"
   },
   "dependencies": {
     "@emotion/is-prop-valid": "^1.4.0",
@@ -51,6 +53,8 @@
     "@tailwindcss/forms": "^0.5.10",
     "@tailwindcss/typography": "^0.5.16",
     "@tanstack/react-table": "^8.21.3",
+    "@tsparticles/react": "^3.0.0",
+    "@tsparticles/slim": "^3.9.1",
     "@types/react-dom": "^19.2.1",
     "@vercel/analytics": "^1.5.0",
     "@vercel/og": "^0.8.5",
@@ -97,6 +101,7 @@
   },
   "devDependencies": {
     "@next/bundle-analyzer": "^15.5.9",
+    "@playwright/test": "^1.57.0",
     "@svgr/webpack": "^8.1.0",
     "@types/mdx": "^2.0.13",
     "@types/react": "^19.2.1",
@@ -114,6 +119,7 @@
     "prettier": "^3.6.2",
     "prettier-plugin-tailwindcss": "^0.6.14",
     "typescript": "^5.9.2",
+    "vercel": "^50.4.6",
     "vfile": "^6.0.3"
   },
   "overrides": {

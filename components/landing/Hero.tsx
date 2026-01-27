@@ -3,27 +3,33 @@
 import Link from 'next/link';
 import { Star, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { NeuralNetwork } from '@/components/animations';
 
 const Hero = () => {
   return (
-    <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden">
-      {/* Animated background decoration */}
-      <div className="absolute inset-0 -z-10">
+    <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden bg-gradient-to-b from-white via-primary-50/30 to-white">
+      {/* Neural Network Background */}
+      <div className="absolute inset-0 -z-20">
+        <NeuralNetwork className="absolute inset-0 w-full h-full" />
+      </div>
+
+      {/* Animated gradient orbs */}
+      <div className="absolute inset-0 -z-10 pointer-events-none">
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.5, ease: 'easeOut' }}
-          className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary-100/30 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4"
+          className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary-100/40 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4"
         />
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.5, delay: 0.2, ease: 'easeOut' }}
-          className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-primary-100/20 rounded-full blur-3xl translate-y-1/2 -translate-x-1/4"
+          className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-primary-100/30 rounded-full blur-3xl translate-y-1/2 -translate-x-1/4"
         />
       </div>
 
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           {/* Headline - HealthWell style with animations */}
           <motion.h1
@@ -122,7 +128,7 @@ const Hero = () => {
             >
               <Link
                 href="/treatments"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 text-body-md font-medium text-neutral-700 bg-white border border-neutral-200 rounded-full hover:border-primary-500 hover:text-primary-600 transition-colors"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 text-body-md font-medium text-neutral-700 bg-white/80 backdrop-blur-sm border border-neutral-200 rounded-full hover:border-primary-500 hover:text-primary-600 transition-colors"
               >
                 Find More
               </Link>
