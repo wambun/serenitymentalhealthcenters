@@ -5,8 +5,8 @@ import { Phone, Calendar } from 'lucide-react';
 
 const CTASection = () => {
   return (
-    <section className="py-20 lg:py-28 bg-neutral-900">
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-20 lg:py-28 bg-neutral-900 w-full">
+      <div className="w-full px-4 sm:px-6 lg:px-12">
         <div className="max-w-3xl mx-auto text-center">
           <div>
             <span className="text-primary-400 font-medium">

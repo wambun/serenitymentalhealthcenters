@@ -20,8 +20,8 @@ const NewsletterSection = () => {
   };
 
   return (
-    <section className="py-20 lg:py-28 bg-primary-500">
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-20 lg:py-28 bg-primary-500 w-full">
+      <div className="w-full px-4 sm:px-6 lg:px-12">
         <div className="max-w-2xl mx-auto text-center">
           <div>
             <h2 className="text-3xl sm:text-4xl font-bold text-white">

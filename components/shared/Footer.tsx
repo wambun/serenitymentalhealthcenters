@@ -6,9 +6,9 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-neutral-800 text-white">
+    <footer className="bg-neutral-800 text-white w-full">
       {/* Main Footer Content */}
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="w-full px-4 sm:px-6 lg:px-12 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-10">
           {/* Brand Column */}
           <div className="lg:col-span-2">
@@ -74,7 +74,7 @@ const Footer = () => {
 
       {/* Bottom Bar */}
       <div className="border-t border-neutral-700">
-        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <div className="w-full px-4 sm:px-6 lg:px-12 py-6">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
             <p className="text-sm text-neutral-500">
               &copy; {currentYear} Serenity Mental Health Centers. All rights
