@@ -4,3 +4,4 @@ export { ScaleOnHover } from './ScaleOnHover';
 export { AnimatedCounter } from './AnimatedCounter';
 export { TextReveal, SplitTextReveal } from './TextReveal';
 export { NeuralNetwork } from './NeuralNetwork';
+export { BrainAnimation } from './BrainAnimation';
