@@ -22,6 +22,20 @@ module.exports = {
         13: '3.25rem',
         14: '3.5rem',
       },
+      fontSize: {
+        // HealthWell typography scale
+        'display-xl': ['5rem', { lineHeight: '1.1', letterSpacing: '-0.02em' }],
+        'display-lg': ['4rem', { lineHeight: '1.1', letterSpacing: '-0.02em' }],
+        'display-md': ['3rem', { lineHeight: '1.2', letterSpacing: '-0.01em' }],
+        'display-sm': ['2.25rem', { lineHeight: '1.2', letterSpacing: '-0.01em' }],
+        'heading-xl': ['2rem', { lineHeight: '1.3', letterSpacing: '-0.01em' }],
+        'heading-lg': ['1.5rem', { lineHeight: '1.4' }],
+        'heading-md': ['1.25rem', { lineHeight: '1.5' }],
+        'body-lg': ['1.125rem', { lineHeight: '1.7' }],
+        'body-md': ['1rem', { lineHeight: '1.7' }],
+        'body-sm': ['0.875rem', { lineHeight: '1.6' }],
+        'caption': ['0.75rem', { lineHeight: '1.5' }],
+      },
       fontFamily: {
         sans: ['var(--font-space-default)', ...fontFamily.sans],
         display: ['var(--font-space-display)', ...fontFamily.sans],
