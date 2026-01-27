@@ -1,18 +1,16 @@
-import { Analytics, AnalyticsConfig } from '@shipixen/pliny/analytics';
-import { Analytics as VercelAnalytics } from '@vercel/analytics/react';
+'use client';
 
+import { Analytics } from '@shipixen/pliny/analytics';
 import { siteConfig } from '@/data/config/site.settings';
 
 export const AnalyticsWrapper = () => {
-  if (siteConfig.analytics && Object.keys(siteConfig.analytics).length) {
+    const analyticsConfig = siteConfig.analytics;
+
+    if (!analyticsConfig) {
+        return null;
+    }
+
     return (
-      <Analytics analyticsConfig={siteConfig.analytics as AnalyticsConfig} />
+        <Analytics analyticsConfig={analyticsConfig} />
     );
-  }
-
-  if (!siteConfig.disableAnalytics) {
-    return <VercelAnalytics />;
-  }
-
-  return <></>;
 };

@@ -185,3 +185,9 @@ vercel
 ## License
 
 MIT
+
+## Majic Prompt
+
+## "Use the Firecrawl script to fetch data from [OLD_SITE_URL] for 'old' and [NEW_REFERENCE_URL] for 'new'. Then read prompt.md and start Phase 1."
+
+## claude --dangerously-skip-permissions

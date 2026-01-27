@@ -1,10 +1,56 @@
+import Header from '@/components/shared/Header';
+import Footer from '@/components/shared/Footer';
+import {
+  Hero,
+  StatsBar,
+  MissionSection,
+  FeatureSection,
+  TestimonialsSection,
+  TreatmentCardsSection,
+  FAQSection,
+  NewsletterSection,
+  CTASection,
+} from '@/components/landing';
+import { treatments } from '@/data/treatments';
+
 export default function Home() {
+  // Get first 3 treatments for feature sections
+  const featuredTreatments = treatments.slice(0, 3);
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-24">
-      <h1 className="text-4xl font-bold">Welcome</h1>
-      <p className="mt-4 text-muted-foreground">
-        Start building your application.
-      </p>
-    </main>
+    <>
+      <Header />
+      <main>
+        {/* Hero Section */}
+        <Hero />
+
+        {/* Stats Bar */}
+        <StatsBar />
+
+        {/* Mission Section */}
+        <MissionSection />
+
+        {/* Feature Sections - Treatments */}
+        {featuredTreatments.map((treatment, index) => (
+          <FeatureSection key={treatment.id} treatment={treatment} index={index} />
+        ))}
+
+        {/* Testimonials */}
+        <TestimonialsSection />
+
+        {/* Treatment Cards */}
+        <TreatmentCardsSection />
+
+        {/* FAQ Section */}
+        <FAQSection />
+
+        {/* CTA Section */}
+        <CTASection />
+
+        {/* Newsletter */}
+        <NewsletterSection />
+      </main>
+      <Footer />
+    </>
   );
 }
