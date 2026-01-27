@@ -24,7 +24,7 @@ export const states: StateInfo[] = [
     id: 'arizona',
     name: 'Arizona',
     abbreviation: 'AZ',
-    image: '/images/locations/arizona.jpg',
+    image: '/images/locations/arizona-1.jpg',
     locations: [
       {
         id: 'az-gilbert',
@@ -76,7 +76,7 @@ export const states: StateInfo[] = [
     id: 'colorado',
     name: 'Colorado',
     abbreviation: 'CO',
-    image: '/images/locations/colorado.jpg',
+    image: '/images/locations/colorado-parker.jpg',
     locations: [
       {
         id: 'co-cherry-creek',
@@ -128,7 +128,7 @@ export const states: StateInfo[] = [
     id: 'florida',
     name: 'Florida',
     abbreviation: 'FL',
-    image: '/images/locations/florida.jpg',
+    image: '/images/locations/florida-1.jpg',
     locations: [
       {
         id: 'fl-jacksonville',
@@ -180,7 +180,7 @@ export const states: StateInfo[] = [
     id: 'georgia',
     name: 'Georgia',
     abbreviation: 'GA',
-    image: '/images/locations/georgia.jpg',
+    image: '/images/locations/georgia-1.jpg',
     locations: [
       {
         id: 'ga-alpharetta',
@@ -210,7 +210,7 @@ export const states: StateInfo[] = [
     id: 'nevada',
     name: 'Nevada',
     abbreviation: 'NV',
-    image: '/images/locations/nevada.jpg',
+    image: '/images/locations/nevada-1.jpg',
     locations: [
       {
         id: 'nv-las-vegas',
@@ -240,7 +240,7 @@ export const states: StateInfo[] = [
     id: 'texas',
     name: 'Texas',
     abbreviation: 'TX',
-    image: '/images/locations/texas.jpg',
+    image: '/images/locations/texas-1.jpg',
     locations: [
       {
         id: 'tx-austin',
@@ -325,7 +325,7 @@ export const states: StateInfo[] = [
     id: 'utah',
     name: 'Utah',
     abbreviation: 'UT',
-    image: '/images/locations/utah.jpg',
+    image: '/images/locations/utah-1.jpg',
     locations: [
       {
         id: 'ut-holladay',
@@ -377,7 +377,7 @@ export const states: StateInfo[] = [
     id: 'virginia',
     name: 'Virginia',
     abbreviation: 'VA',
-    image: '/images/locations/virginia.jpg',
+    image: '/images/locations/virginia-fairfax.jpg',
     locations: [
       {
         id: 'va-fairfax',
