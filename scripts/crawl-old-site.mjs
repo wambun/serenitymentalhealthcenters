@@ -2,7 +2,12 @@ import FirecrawlApp from '@mendable/firecrawl-js';
 import fs from 'fs';
 import path from 'path';
 
-const FIRECRAWL_API_KEY = process.env.FIRECRAWL_API_KEY || 'fc-96f59a31f6624a17b13e9ddb62d9f00b';
+const FIRECRAWL_API_KEY = process.env.FIRECRAWL_API_KEY;
+
+if (!FIRECRAWL_API_KEY) {
+  console.error('❌ FIRECRAWL_API_KEY environment variable is required');
+  process.exit(1);
+}
 const OLD_SITE_URL = 'https://serenitymentalhealthcenters.com';
 
 const app = new FirecrawlApp({ apiKey: FIRECRAWL_API_KEY });
