@@ -21,12 +21,14 @@ const Footer = () => {
                 height={56}
                 className="h-14 w-auto"
               />
-              <span className="text-2xl font-bold">
-                Serenity
-                <span className="font-light text-primary-400 ml-1">
+              <div className="flex flex-col leading-tight">
+                <span className="text-xl font-bold tracking-[0.2em] uppercase text-primary-400">
+                  Serenity
+                </span>
+                <span className="text-[10px] font-medium tracking-[0.25em] uppercase text-amber-500">
                   Mental Health
                 </span>
-              </span>
+              </div>
             </Link>
             <p className="text-neutral-400 text-sm mb-6 max-w-sm">
               Giving you mental healing and overall wellness in our best-in-class

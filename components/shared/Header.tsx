@@ -44,11 +44,11 @@ const Header = () => {
               height={48}
               className="h-12 w-auto"
             />
-            <div className="hidden sm:flex items-center">
-              <span className="text-xl font-bold text-neutral-800">
+            <div className="hidden sm:flex flex-col leading-tight">
+              <span className="text-lg font-bold tracking-[0.2em] uppercase text-primary-600">
                 Serenity
               </span>
-              <span className="text-xl font-light text-primary-500 ml-1">
+              <span className="text-[10px] font-medium tracking-[0.25em] uppercase text-amber-600">
                 Mental Health
               </span>
             </div>
