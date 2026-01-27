@@ -113,19 +113,31 @@ export default function LocationsPage() {
                             </h4>
 
                             <div className="mt-3 space-y-2">
+                              {location.address && (
+                                <div className="flex items-start gap-2 text-body-sm text-neutral-600">
+                                  <MapPin className="w-4 h-4 text-primary-500 flex-shrink-0 mt-0.5" />
+                                  <span>
+                                    {location.address}
+                                    <br />
+                                    {location.city}, {state.abbreviation} {location.zip}
+                                  </span>
+                                </div>
+                              )}
                               <div className="flex items-center gap-2 text-body-sm text-neutral-600">
                                 <Phone className="w-4 h-4 text-primary-500 flex-shrink-0" />
                                 <a
                                   href={`tel:${location.phone}`}
-                                  className="hover:text-primary-600 transition-colors"
+                                  className="hover:text-primary-600 transition-colors font-medium"
                                 >
                                   {location.phone}
                                 </a>
                               </div>
-                              <div className="flex items-center gap-2 text-body-sm text-neutral-600">
-                                <Clock className="w-4 h-4 text-primary-500 flex-shrink-0" />
-                                <span>Mon-Fri: 8am - 5pm</span>
-                              </div>
+                              {location.hours && (
+                                <div className="flex items-center gap-2 text-body-sm text-neutral-600">
+                                  <Clock className="w-4 h-4 text-primary-500 flex-shrink-0" />
+                                  <span>{location.hours}</span>
+                                </div>
+                              )}
                             </div>
 
                             {location.services && location.services.length > 0 && (

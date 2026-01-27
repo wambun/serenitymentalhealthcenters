@@ -39,7 +39,7 @@ export const footerLinks: Array<{
     columnName: 'Resources',
     links: [
       { href: '/insurance', title: 'Insurance' },
-      { href: '/blog', title: 'Mental Health Blog' },
+      { href: '/resources', title: 'Patient Resources' },
       { href: '/appointment', title: 'Request Appointment' },
       { href: '/privacy', title: 'Privacy Policy' },
     ],
