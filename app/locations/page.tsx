@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import Header from '@/components/shared/Header';
 import Footer from '@/components/shared/Footer';
 import PageHeader from '@/components/page/PageHeader';
@@ -63,78 +64,98 @@ export default function LocationsPage() {
               </p>
             </div>
 
-            <div className="space-y-12">
+            <div className="space-y-8">
               {states.map((state) => (
-                <div key={state.id} className="bg-white rounded-2xl border border-neutral-200 overflow-hidden">
-                  {/* State Header */}
-                  <div className="px-8 py-6 bg-neutral-50 border-b border-neutral-200">
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-3">
-                        <div className="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center">
-                          <MapPin className="w-6 h-6 text-primary-600" />
+                <div
+                  key={state.id}
+                  className="bg-white rounded-2xl border border-neutral-200 overflow-hidden hover:shadow-lg transition-shadow"
+                >
+                  <div className="grid lg:grid-cols-3">
+                    {/* State Image or Gradient */}
+                    <div className="relative h-48 lg:h-auto lg:min-h-[280px]">
+                      {state.image ? (
+                        <Image
+                          src={state.image}
+                          alt={`${state.name} location`}
+                          fill
+                          className="object-cover"
+                        />
+                      ) : (
+                        <div className="absolute inset-0 bg-gradient-to-br from-primary-400 to-primary-600 flex items-center justify-center">
+                          <div className="text-center text-white">
+                            <MapPin className="w-12 h-12 mx-auto mb-2 opacity-50" />
+                            <span className="text-2xl font-bold">{state.abbreviation}</span>
+                          </div>
                         </div>
-                        <div>
-                          <h3 className="text-heading-xl font-bold text-neutral-900">
-                            {state.name}
-                          </h3>
-                          <p className="text-body-sm text-neutral-500">
-                            {state.locations.length} {state.locations.length === 1 ? 'location' : 'locations'}
-                          </p>
-                        </div>
+                      )}
+                      {/* State overlay */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+                      <div className="absolute bottom-0 left-0 right-0 p-6">
+                        <h3 className="text-2xl font-bold text-white">
+                          {state.name}
+                        </h3>
+                        <p className="text-white/80 text-sm mt-1">
+                          {state.locations.length} {state.locations.length === 1 ? 'location' : 'locations'}
+                        </p>
                       </div>
                     </div>
-                  </div>
 
-                  {/* Locations Grid */}
-                  <div className="p-8">
-                    <div className="grid md:grid-cols-2 gap-6">
-                      {state.locations.map((location) => (
-                        <div
-                          key={location.id}
-                          className="p-6 bg-neutral-50 rounded-xl hover:bg-primary-50 transition-colors group"
-                        >
-                          <h4 className="text-heading-lg font-semibold text-neutral-900 group-hover:text-primary-600 transition-colors">
-                            {location.name}
-                          </h4>
-
-                          <div className="mt-4 space-y-2">
-                            <div className="flex items-center gap-2 text-body-sm text-neutral-600">
-                              <Phone className="w-4 h-4 text-primary-500" />
-                              <a
-                                href={`tel:${location.phone}`}
-                                className="hover:text-primary-600 transition-colors"
-                              >
-                                {location.phone}
-                              </a>
-                            </div>
-                            <div className="flex items-center gap-2 text-body-sm text-neutral-600">
-                              <Clock className="w-4 h-4 text-primary-500" />
-                              <span>Mon-Fri: 8am - 5pm</span>
-                            </div>
-                          </div>
-
-                          {location.services && location.services.length > 0 && (
-                            <div className="mt-4 flex flex-wrap gap-2">
-                              {location.services.map((service) => (
-                                <span
-                                  key={service}
-                                  className="px-3 py-1 bg-white rounded-full text-caption text-neutral-600 border border-neutral-200"
-                                >
-                                  {service}
-                                </span>
-                              ))}
-                            </div>
-                          )}
-
-                          <Link
-                            href="/appointment"
-                            className="inline-flex items-center gap-2 mt-6 text-body-sm font-medium text-primary-500 hover:text-primary-600"
+                    {/* Locations */}
+                    <div className="lg:col-span-2 p-6 lg:p-8">
+                      <div className="grid sm:grid-cols-2 gap-4">
+                        {state.locations.map((location) => (
+                          <div
+                            key={location.id}
+                            className="p-5 bg-neutral-50 rounded-xl hover:bg-primary-50 transition-colors group"
                           >
-                            Schedule at this location
-                            <ArrowRight className="w-4 h-4" />
-                          </Link>
-                        </div>
-                      ))}
+                            <h4 className="text-heading-md font-semibold text-neutral-900 group-hover:text-primary-600 transition-colors">
+                              {location.name}
+                            </h4>
+
+                            <div className="mt-3 space-y-2">
+                              <div className="flex items-center gap-2 text-body-sm text-neutral-600">
+                                <Phone className="w-4 h-4 text-primary-500 flex-shrink-0" />
+                                <a
+                                  href={`tel:${location.phone}`}
+                                  className="hover:text-primary-600 transition-colors"
+                                >
+                                  {location.phone}
+                                </a>
+                              </div>
+                              <div className="flex items-center gap-2 text-body-sm text-neutral-600">
+                                <Clock className="w-4 h-4 text-primary-500 flex-shrink-0" />
+                                <span>Mon-Fri: 8am - 5pm</span>
+                              </div>
+                            </div>
+
+                            {location.services && location.services.length > 0 && (
+                              <div className="mt-3 flex flex-wrap gap-1.5">
+                                {location.services.slice(0, 3).map((service) => (
+                                  <span
+                                    key={service}
+                                    className="px-2 py-0.5 bg-white rounded-full text-xs text-neutral-600 border border-neutral-200"
+                                  >
+                                    {service}
+                                  </span>
+                                ))}
+                                {location.services.length > 3 && (
+                                  <span className="px-2 py-0.5 text-xs text-neutral-500">
+                                    +{location.services.length - 3} more
+                                  </span>
+                                )}
+                              </div>
+                            )}
+
+                            <Link
+                              href="/appointment"
+                              className="inline-flex items-center gap-1.5 mt-4 text-body-sm font-medium text-primary-500 hover:text-primary-600"
+                            >
+                              Book appointment
+                              <ArrowRight className="w-3.5 h-3.5" />
+                            </Link>
+                          </div>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </div>

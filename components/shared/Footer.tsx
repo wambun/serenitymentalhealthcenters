@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Phone, Mail, MapPin } from 'lucide-react';
 import { footerLinks } from '@/data/config/footerLinks';
 
@@ -12,7 +13,14 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-10">
           {/* Brand Column */}
           <div className="lg:col-span-2">
-            <Link href="/" className="inline-block mb-6">
+            <Link href="/" className="inline-flex items-center gap-3 mb-6">
+              <Image
+                src="/images/logo.svg"
+                alt="Serenity Mental Health"
+                width={56}
+                height={56}
+                className="h-14 w-auto brightness-0 invert"
+              />
               <span className="text-2xl font-bold">
                 Serenity
                 <span className="font-light text-primary-400 ml-1">

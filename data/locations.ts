@@ -15,6 +15,7 @@ export interface StateInfo {
   id: string;
   name: string;
   abbreviation: string;
+  image?: string;
   locations: Location[];
 }
 
@@ -40,6 +41,7 @@ export const states: StateInfo[] = [
     id: 'colorado',
     name: 'Colorado',
     abbreviation: 'CO',
+    image: '/images/locations/colorado-parker.jpg',
     locations: [
       {
         id: 'co-denver',
@@ -162,6 +164,7 @@ export const states: StateInfo[] = [
     id: 'virginia',
     name: 'Virginia',
     abbreviation: 'VA',
+    image: '/images/locations/virginia-fairfax.jpg',
     locations: [
       {
         id: 'va-richmond',

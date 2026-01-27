@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Phone } from 'lucide-react';
 import { headerNavLinks } from '@/data/config/headerNavLinks';
+import Image from 'next/image';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -35,8 +36,15 @@ const Header = () => {
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
-            <div className="flex items-center">
+          <Link href="/" className="flex items-center gap-3">
+            <Image
+              src="/images/logo.svg"
+              alt="Serenity Mental Health"
+              width={48}
+              height={48}
+              className="h-12 w-auto"
+            />
+            <div className="hidden sm:flex items-center">
               <span className="text-xl font-bold text-neutral-800">
                 Serenity
               </span>
