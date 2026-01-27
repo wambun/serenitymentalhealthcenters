@@ -29,6 +29,7 @@ export const footerLinks: Array<{
     columnName: 'Company',
     links: [
       { href: '/about', title: 'About Us' },
+      { href: '/providers', title: 'Our Providers' },
       { href: '/locations', title: 'Locations' },
       { href: '/testimonials', title: 'Patient Stories' },
       { href: '/careers', title: 'Careers' },

@@ -6,6 +6,7 @@ export const headerNavLinks: Array<{
   { href: '/about', title: 'About' },
   { href: '/treatments', title: 'Treatments' },
   { href: '/conditions', title: 'Conditions' },
+  { href: '/providers', title: 'Providers' },
   { href: '/locations', title: 'Locations' },
   { href: '/contact', title: 'Contact' },
 ];
