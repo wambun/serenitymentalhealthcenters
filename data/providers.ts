@@ -17,6 +17,7 @@ export const providers: Provider[] = [
   // ============================================
   {
     id: 'teejay-tripp',
+    image: '/images/providers/teejay-tripp.jpg',
     name: 'TeeJay Tripp',
     credentials: 'DO',
     title: 'Chief Medical Officer',
@@ -27,6 +28,7 @@ export const providers: Provider[] = [
   },
   {
     id: 'jayson-tripp',
+    image: '/images/providers/jayson-tripp.jpg',
     name: 'Jayson Tripp',
     credentials: 'MD',
     title: 'Psychiatrist',
@@ -42,6 +44,7 @@ export const providers: Provider[] = [
   // Gilbert
   {
     id: 'sarah-buttles',
+    image: '/images/providers/sarah-buttles.jpg',
     name: 'Sarah Buttles',
     credentials: 'PMHNP',
     title: 'Psychiatric Nurse Practitioner',
@@ -51,6 +54,7 @@ export const providers: Provider[] = [
   },
   {
     id: 'aaron-dahl',
+    image: '/images/providers/aaron-dahl.jpg',
     name: 'Aaron Dahl',
     credentials: 'MD',
     title: 'Psychiatrist',
@@ -60,6 +64,7 @@ export const providers: Provider[] = [
   },
   {
     id: 'sarah-moody',
+    image: '/images/providers/sarah-moody.jpg',
     name: 'Sarah Moody',
     credentials: 'PMHNP',
     title: 'Psychiatric Nurse Practitioner',
@@ -69,6 +74,7 @@ export const providers: Provider[] = [
   },
   {
     id: 'ryan-wandler',
+    image: '/images/providers/ryan-wandler.png',
     name: 'Ryan Wandler',
     credentials: 'NP',
     title: 'Nurse Practitioner',
@@ -78,6 +84,7 @@ export const providers: Provider[] = [
   },
   {
     id: 'brad-zehring',
+    image: '/images/providers/brad-zehring.jpg',
     name: 'Brad Zehring',
     credentials: 'DO',
     title: 'Psychiatrist',
@@ -87,6 +94,7 @@ export const providers: Provider[] = [
   },
   {
     id: 'mikayla-butkus',
+    image: '/images/providers/mikayla-butkus.jpeg',
     name: 'Mikayla Butkus',
     credentials: 'PMHNP',
     title: 'Psychiatric Nurse Practitioner',
@@ -98,6 +106,7 @@ export const providers: Provider[] = [
   // Chandler
   {
     id: 'aaron-clay',
+    image: '/images/providers/aaron-clay.jpg',
     name: 'Aaron Clay',
     credentials: 'DO',
     title: 'Psychiatrist',
@@ -107,6 +116,7 @@ export const providers: Provider[] = [
   },
   {
     id: 'jeffrey-ely',
+    image: '/images/providers/jeffrey-ely.jpg',
     name: 'Jeffrey Ely',
     credentials: 'NP',
     title: 'Nurse Practitioner',
@@ -116,6 +126,7 @@ export const providers: Provider[] = [
   },
   {
     id: 'david-gallegos',
+    image: '/images/providers/david-gallegos.jpg',
     name: 'David Gallegos',
     credentials: 'PMHNP',
     title: 'Psychiatric Nurse Practitioner',
@@ -125,6 +136,7 @@ export const providers: Provider[] = [
   },
   {
     id: 'david-hauser',
+    image: '/images/providers/david-hauser.jpg',
     name: 'David Hauser',
     credentials: 'MD',
     title: 'Psychiatrist',
@@ -134,6 +146,7 @@ export const providers: Provider[] = [
   },
   {
     id: 'michelle-reijonen',
+    image: '/images/providers/michelle-reijonen.jpeg',
     name: 'Michelle Reijonen',
     credentials: 'PMHNP',
     title: 'Psychiatric Nurse Practitioner',
@@ -143,6 +156,7 @@ export const providers: Provider[] = [
   },
   {
     id: 'elizabeth-rotella',
+    image: '/images/providers/elizabeth-rotella.png',
     name: 'Elizabeth Rotella',
     credentials: 'NP',
     title: 'Nurse Practitioner',
@@ -154,6 +168,7 @@ export const providers: Provider[] = [
   // Desert Ridge
   {
     id: 'winona-belmonte',
+    image: '/images/providers/winona-belmonte.jpg',
     name: 'Winona Belmonte',
     credentials: 'MD',
     title: 'Psychiatrist',
@@ -163,6 +178,7 @@ export const providers: Provider[] = [
   },
   {
     id: 'kayla-cartwright',
+    image: '/images/providers/kayla-cartwright.jpg',
     name: 'Kayla Cartwright',
     credentials: 'PMHNP',
     title: 'Psychiatric Nurse Practitioner',
@@ -172,6 +188,7 @@ export const providers: Provider[] = [
   },
   {
     id: 'yong-lee',
+    image: '/images/providers/yong-lee.jpg',
     name: 'Yong Lee',
     credentials: 'MD',
     title: 'Psychiatrist',
@@ -181,6 +198,7 @@ export const providers: Provider[] = [
   },
   {
     id: 'melissa-leuzzi',
+    image: '/images/providers/melissa-leuzzi.jpg',
     name: 'Melissa Leuzzi',
     credentials: 'NP',
     title: 'Nurse Practitioner',
@@ -190,6 +208,7 @@ export const providers: Provider[] = [
   },
   {
     id: 'lauren-marienau',
+    image: '/images/providers/lauren-marienau.jpg',
     name: 'Lauren Marienau',
     credentials: 'NP',
     title: 'Psychiatric Nurse Practitioner',
@@ -199,6 +218,7 @@ export const providers: Provider[] = [
   },
   {
     id: 'angela-oakley',
+    image: '/images/providers/angela-oakley.jpg',
     name: 'Angela Oakley',
     credentials: 'PMHNP',
     title: 'Psychiatric Nurse Practitioner',
@@ -208,6 +228,7 @@ export const providers: Provider[] = [
   },
   {
     id: 'ekus-onosode',
+    image: '/images/providers/ekus-onosode.jpeg',
     name: 'Ekuevugbe (Ekus) Onosode',
     credentials: 'DNP',
     title: 'Psychiatric Nurse Practitioner',
@@ -217,6 +238,7 @@ export const providers: Provider[] = [
   },
   {
     id: 'elias-ruiloba',
+    image: '/images/providers/elias-ruiloba.jpg',
     name: 'Elias Ruiloba',
     credentials: 'MD',
     title: 'Psychiatrist',
@@ -228,6 +250,7 @@ export const providers: Provider[] = [
   // Biltmore
   {
     id: 'nathaniel-brooks',
+    image: '/images/providers/nathaniel-brooks.webp',
     name: 'Nathaniel Brooks',
     credentials: 'MD',
     title: 'Psychiatrist',
@@ -237,6 +260,7 @@ export const providers: Provider[] = [
   },
   {
     id: 'tara-leedham',
+    image: '/images/providers/tara-leedham.webp',
     name: 'Tara Leedham',
     credentials: 'NP',
     title: 'Psychiatric Nurse Practitioner',
@@ -246,6 +270,7 @@ export const providers: Provider[] = [
   },
   {
     id: 'marcus-nielson',
+    image: '/images/providers/marcus-nielson.webp',
     name: 'Marcus Nielson',
     credentials: 'PMHNP',
     title: 'Psychiatric Nurse Practitioner',
@@ -255,6 +280,7 @@ export const providers: Provider[] = [
   },
   {
     id: 'alexandria-penner',
+    image: '/images/providers/alexandria-penner.webp',
     name: 'Alexandria Penner',
     credentials: 'DNP',
     title: 'Psychiatric Nurse Practitioner',
@@ -264,6 +290,7 @@ export const providers: Provider[] = [
   },
   {
     id: 'laura-skiba',
+    image: '/images/providers/laura-skiba.png',
     name: 'Laura Skiba',
     credentials: 'NP',
     title: 'Nurse Practitioner',
@@ -273,6 +300,7 @@ export const providers: Provider[] = [
   },
   {
     id: 'deborah-stegner',
+    image: '/images/providers/deborah-stegner.jpg',
     name: 'Deborah Stegner',
     credentials: 'MD',
     title: 'Psychiatrist',
@@ -282,6 +310,7 @@ export const providers: Provider[] = [
   },
   {
     id: 'naomi-park',
+    image: '/images/providers/naomi-park.jpg',
     name: 'Naomi Park',
     credentials: 'MD, ABPN',
     title: 'Board-Certified Psychiatrist',
@@ -292,6 +321,7 @@ export const providers: Provider[] = [
   },
   {
     id: 'marci-bastien',
+    image: '/images/providers/marci-bastien.jpeg',
     name: 'Marci Bastien',
     credentials: 'PMHNP',
     title: 'Psychiatric Nurse Practitioner',
@@ -301,6 +331,7 @@ export const providers: Provider[] = [
   },
   {
     id: 'christian-gerwe',
+    image: '/images/providers/christian-gerwe.jpg',
     name: 'Christian Gerwe',
     credentials: 'MD',
     title: 'Psychiatrist',
@@ -315,6 +346,7 @@ export const providers: Provider[] = [
   // Cherry Creek
   {
     id: 'austin-alderton',
+    image: '/images/providers/austin-alderton.jpg',
     name: 'Austin Alderton',
     credentials: 'NP',
     title: 'Nurse Practitioner',
@@ -324,6 +356,7 @@ export const providers: Provider[] = [
   },
   {
     id: 'nico-bohm',
+    image: '/images/providers/nico-bohm.jpg',
     name: 'Nico Bohm',
     credentials: 'NP',
     title: 'Nurse Practitioner',
@@ -333,6 +366,7 @@ export const providers: Provider[] = [
   },
   {
     id: 'jennifer-french',
+    image: '/images/providers/jennifer-french.jpg',
     name: 'Jennifer French',
     credentials: 'DO',
     title: 'Psychiatrist',
@@ -343,6 +377,7 @@ export const providers: Provider[] = [
   },
   {
     id: 'johnny-patterson',
+    image: '/images/providers/johnny-patterson.jpg',
     name: 'Johnny Patterson',
     credentials: 'PMHNP',
     title: 'Psychiatric Nurse Practitioner',
@@ -352,6 +387,7 @@ export const providers: Provider[] = [
   },
   {
     id: 'michael-wolfe',
+    image: '/images/providers/michael-wolfe.jpg',
     name: 'Michael Wolfe',
     credentials: 'MD',
     title: 'Psychiatrist',
@@ -361,6 +397,7 @@ export const providers: Provider[] = [
   },
   {
     id: 'emily-brookshire',
+    image: '/images/providers/emily-brookshire.jpeg',
     name: 'Emily Brookshire',
     credentials: 'MD',
     title: 'Psychiatrist',
@@ -372,6 +409,7 @@ export const providers: Provider[] = [
   // Colorado Springs
   {
     id: 'sarah-gates',
+    image: '/images/providers/sarah-gates.jpg',
     name: 'Sarah Gates',
     credentials: 'NP',
     title: 'Nurse Practitioner',
@@ -381,6 +419,7 @@ export const providers: Provider[] = [
   },
   {
     id: 'matthew-mills',
+    image: '/images/providers/matthew-mills.jpg',
     name: 'Matthew Mills',
     credentials: 'DO',
     title: 'Psychiatrist',
@@ -390,6 +429,7 @@ export const providers: Provider[] = [
   },
   {
     id: 'roselie-woodard',
+    image: '/images/providers/roselie-woodard.jpg',
     name: 'Roselie Woodard',
     credentials: 'NP',
     title: 'Nurse Practitioner',
@@ -399,6 +439,7 @@ export const providers: Provider[] = [
   },
   {
     id: 'elaina-wooten',
+    image: '/images/providers/elaina-wooten.jpg',
     name: 'Elaina Wooten',
     credentials: 'NP',
     title: 'Nurse Practitioner',
@@ -408,6 +449,7 @@ export const providers: Provider[] = [
   },
   {
     id: 'talmage-nielsen',
+    image: '/images/providers/talmage-nielsen.jpg',
     name: 'Talmage Nielsen',
     credentials: 'DO',
     title: 'Psychiatrist',
@@ -430,6 +472,7 @@ export const providers: Provider[] = [
   // Lakewood
   {
     id: 'michaela-black',
+    image: '/images/providers/michaela-black.webp',
     name: 'Michaela Black',
     credentials: 'NP',
     title: 'Nurse Practitioner',
@@ -439,6 +482,7 @@ export const providers: Provider[] = [
   },
   {
     id: 'kara-guglielmo',
+    image: '/images/providers/kara-guglielmo.jpg',
     name: 'Kara Guglielmo',
     credentials: 'NP',
     title: 'Nurse Practitioner',
@@ -448,6 +492,7 @@ export const providers: Provider[] = [
   },
   {
     id: 'aimee-jackowski',
+    image: '/images/providers/aimee-jackowski.png',
     name: 'Aimee Jackowski',
     credentials: 'NP',
     title: 'Nurse Practitioner',
@@ -457,6 +502,7 @@ export const providers: Provider[] = [
   },
   {
     id: 'jordan-suchy',
+    image: '/images/providers/jordan-suchy.jpg',
     name: 'Jordan Suchy',
     credentials: 'DO',
     title: 'Psychiatrist',
@@ -466,6 +512,7 @@ export const providers: Provider[] = [
   },
   {
     id: 'angela-zimmerman',
+    image: '/images/providers/angela-zimmerman.jpg',
     name: 'Angela Zimmerman',
     credentials: 'PMHNP',
     title: 'Psychiatric Nurse Practitioner',
@@ -475,6 +522,7 @@ export const providers: Provider[] = [
   },
   {
     id: 'dustin-froehlich',
+    image: '/images/providers/dustin-froehlich.jpg',
     name: 'Dustin Froehlich',
     credentials: 'MD',
     title: 'Psychiatrist',
@@ -489,6 +537,7 @@ export const providers: Provider[] = [
   // Jacksonville
   {
     id: 'sherry-carter',
+    image: '/images/providers/sherry-carter.jpg',
     name: 'Sherry Carter',
     credentials: 'NP',
     title: 'Nurse Practitioner',
@@ -498,6 +547,7 @@ export const providers: Provider[] = [
   },
   {
     id: 'dianne-dekeyser',
+    image: '/images/providers/dianne-dekeyser.jpg',
     name: 'Dianne Dekeyser',
     credentials: 'MD',
     title: 'Psychiatrist',
@@ -508,6 +558,7 @@ export const providers: Provider[] = [
   },
   {
     id: 'cristina-lopez-seiler',
+    image: '/images/providers/cristina-lopez-seiler.jpg',
     name: 'Cristina Lopez Seiler',
     credentials: 'NP',
     title: 'Nurse Practitioner',
@@ -517,6 +568,7 @@ export const providers: Provider[] = [
   },
   {
     id: 'david-tyson',
+    image: '/images/providers/david-tyson.jpg',
     name: 'David Tyson',
     credentials: 'MD',
     title: 'Psychiatrist',
@@ -528,6 +580,7 @@ export const providers: Provider[] = [
   // Orlando
   {
     id: 'joshua-lotfallah',
+    image: '/images/providers/joshua-lotfallah.png',
     name: 'Joshua Lotfallah',
     credentials: 'MD',
     title: 'Psychiatrist',
@@ -537,6 +590,7 @@ export const providers: Provider[] = [
   },
   {
     id: 'modupe-mcintosh',
+    image: '/images/providers/modupe-mcintosh.png',
     name: "Modupe 'Mo' McIntosh",
     credentials: 'NP',
     title: 'Nurse Practitioner',
@@ -548,6 +602,7 @@ export const providers: Provider[] = [
   // Lake Mary
   {
     id: 'tim-larson',
+    image: '/images/providers/tim-larson.png',
     name: 'Tim Larson',
     credentials: 'MD',
     title: 'Psychiatrist',
@@ -573,6 +628,7 @@ export const providers: Provider[] = [
   // Sandy Springs
   {
     id: 'bianca-mitchell',
+    image: '/images/providers/bianca-mitchell.jpg',
     name: 'Bianca Mitchell',
     credentials: 'PMHNP',
     title: 'Psychiatric Nurse Practitioner',
@@ -582,6 +638,7 @@ export const providers: Provider[] = [
   },
   {
     id: 'tiffany-talton',
+    image: '/images/providers/tiffany-talton.jpg',
     name: 'Tiffany Talton',
     credentials: 'NP',
     title: 'Psychiatric Nurse Practitioner',
@@ -591,6 +648,7 @@ export const providers: Provider[] = [
   },
   {
     id: 'avis-gibson-holmes',
+    image: '/images/providers/avis-gibson-holmes.jpg',
     name: 'Avis Gibson Holmes',
     credentials: 'PMHNP-BC',
     title: 'Psychiatric Nurse Practitioner',
@@ -600,6 +658,7 @@ export const providers: Provider[] = [
   },
   {
     id: 'lacey-jeong',
+    image: '/images/providers/lacey-jeong.jpg',
     name: 'Lacey Jeong',
     credentials: 'MD',
     title: 'Psychiatrist',
@@ -609,6 +668,7 @@ export const providers: Provider[] = [
   },
   {
     id: 'nia-anderson',
+    image: '/images/providers/nia-anderson.jpg',
     name: 'Nia I. Anderson',
     credentials: 'MSN, APRN, PMHNP-BC',
     title: 'Psychiatric Nurse Practitioner',
@@ -618,6 +678,7 @@ export const providers: Provider[] = [
   },
   {
     id: 'paul-ferns',
+    image: '/images/providers/paul-ferns.jpg',
     name: 'Paul Ferns',
     credentials: 'DO',
     title: 'Psychiatrist',
@@ -632,6 +693,7 @@ export const providers: Provider[] = [
   // Las Vegas
   {
     id: 'rowena-de-la-cruz',
+    image: '/images/providers/rowena-de-la-cruz.jpg',
     name: 'Rowena De La Cruz',
     credentials: 'NP',
     title: 'Nurse Practitioner',
@@ -641,6 +703,7 @@ export const providers: Provider[] = [
   },
   {
     id: 'david-gibson',
+    image: '/images/providers/david-gibson.jpg',
     name: 'David Gibson',
     credentials: 'MD',
     title: 'Psychiatrist',
@@ -650,6 +713,7 @@ export const providers: Provider[] = [
   },
   {
     id: 'tavi-thongdy',
+    image: '/images/providers/tavi-thongdy.png',
     name: 'Tavi Thongdy',
     credentials: 'MD',
     title: 'Psychiatrist',
@@ -661,6 +725,7 @@ export const providers: Provider[] = [
   // Henderson
   {
     id: 'sterling-hahn',
+    image: '/images/providers/sterling-hahn.png',
     name: 'Sterling Hahn',
     credentials: 'DO',
     title: 'Psychiatrist',
@@ -670,6 +735,7 @@ export const providers: Provider[] = [
   },
   {
     id: 'jayison-mccorkle',
+    image: '/images/providers/jayison-mccorkle.jpg',
     name: 'Jayison McCorkle',
     credentials: 'NP',
     title: 'Psychiatric Nurse Practitioner',
@@ -679,6 +745,7 @@ export const providers: Provider[] = [
   },
   {
     id: 'anna-simonenko',
+    image: '/images/providers/anna-simonenko.jpg',
     name: 'Anna Simonenko',
     credentials: 'PMHNP',
     title: 'Psychiatric Nurse Practitioner',
@@ -693,6 +760,7 @@ export const providers: Provider[] = [
   // Austin
   {
     id: 'jeffrey-twiss',
+    image: '/images/providers/jeffrey-twiss.jpg',
     name: 'Jeffrey Twiss',
     credentials: 'NP',
     title: 'Psychiatric Nurse Practitioner',
@@ -702,6 +770,7 @@ export const providers: Provider[] = [
   },
   {
     id: 'joseph-houchins',
+    image: '/images/providers/joseph-houchins.jpg',
     name: 'Joseph Houchins',
     credentials: 'DNP',
     title: 'Psychiatric Nurse Practitioner',
@@ -711,6 +780,7 @@ export const providers: Provider[] = [
   },
   {
     id: 'ryan-jones',
+    image: '/images/providers/ryan-jones.jpg',
     name: 'Ryan Jones',
     credentials: 'MD',
     title: 'Psychiatrist',
@@ -722,6 +792,7 @@ export const providers: Provider[] = [
   // San Antonio
   {
     id: 'carlos-aleman',
+    image: '/images/providers/carlos-aleman.jpg',
     name: 'Carlos Aleman',
     credentials: 'PMHNP',
     title: 'Psychiatric Nurse Practitioner',
@@ -731,6 +802,7 @@ export const providers: Provider[] = [
   },
   {
     id: 'lucy-flores',
+    image: '/images/providers/lucy-flores.jpg',
     name: 'Lucy Flores',
     credentials: 'NP',
     title: 'Nurse Practitioner',
@@ -740,6 +812,7 @@ export const providers: Provider[] = [
   },
   {
     id: 'shadi-lavasani',
+    image: '/images/providers/shadi-lavasani.jpg',
     name: 'Shadi Lavasani',
     credentials: 'MD',
     title: 'Psychiatrist',
@@ -749,6 +822,7 @@ export const providers: Provider[] = [
   },
   {
     id: 'erik-lundmark',
+    image: '/images/providers/erik-lundmark.jpg',
     name: 'Erik Lundmark',
     credentials: 'MD',
     title: 'Psychiatrist',
@@ -758,6 +832,7 @@ export const providers: Provider[] = [
   },
   {
     id: 'andrew-norman',
+    image: '/images/providers/andrew-norman.jpg',
     name: 'Andrew Norman',
     credentials: 'DO',
     title: 'Psychiatrist',
@@ -767,6 +842,7 @@ export const providers: Provider[] = [
   },
   {
     id: 'monique-reyes-lester',
+    image: '/images/providers/monique-reyes-lester.jpg',
     name: 'Monique Reyes-Lester',
     credentials: 'PMHNP',
     title: 'Psychiatric Nurse Practitioner',
@@ -778,6 +854,7 @@ export const providers: Provider[] = [
   // Fort Worth
   {
     id: 'alexa-westbrook-quintanilla',
+    image: '/images/providers/alexa-westbrook-quintanilla.jpg',
     name: 'Alexa Westbrook Quintanilla',
     credentials: 'DNP',
     title: 'Psychiatric Nurse Practitioner',
@@ -789,6 +866,7 @@ export const providers: Provider[] = [
   // Frisco
   {
     id: 'elise-griffin',
+    image: '/images/providers/elise-griffin.jpg',
     name: 'Elise Griffin',
     credentials: 'DO',
     title: 'Psychiatrist',
@@ -798,6 +876,7 @@ export const providers: Provider[] = [
   },
   {
     id: 'alex-chung',
+    image: '/images/providers/alex-chung.jpg',
     name: 'Alex Chung',
     credentials: 'MD',
     title: 'Psychiatrist',
@@ -807,6 +886,7 @@ export const providers: Provider[] = [
   },
   {
     id: 'zahra-hassanally',
+    image: '/images/providers/zahra-hassanally.jpg',
     name: 'Zahra Hassanally',
     credentials: 'MSN, APRN, PMHNP-BC',
     title: 'Psychiatric Nurse Practitioner',
@@ -816,6 +896,7 @@ export const providers: Provider[] = [
   },
   {
     id: 'erica-canterbury',
+    image: '/images/providers/erica-canterbury.jpg',
     name: 'Erica Canterbury',
     credentials: 'PMHNP-BC',
     title: 'Psychiatric Nurse Practitioner',
@@ -859,6 +940,7 @@ export const providers: Provider[] = [
   // Holladay
   {
     id: 'benjamin-shapiro',
+    image: '/images/providers/benjamin-shapiro.jpg',
     name: 'Benjamin Shapiro',
     credentials: 'MD',
     title: 'Psychiatrist',
@@ -868,6 +950,7 @@ export const providers: Provider[] = [
   },
   {
     id: 'elizabeth-zeker',
+    image: '/images/providers/elizabeth-zeker.jpg',
     name: 'Elizabeth Zeker',
     credentials: 'NP',
     title: 'Nurse Practitioner',
@@ -877,6 +960,7 @@ export const providers: Provider[] = [
   },
   {
     id: 'ivan-mayor',
+    image: '/images/providers/ivan-mayor.jpg',
     name: 'Ivan Mayor',
     credentials: 'MD',
     title: 'Psychiatrist',
@@ -888,6 +972,7 @@ export const providers: Provider[] = [
   // Provo
   {
     id: 'jenna-hyer',
+    image: '/images/providers/jenna-hyer.jpg',
     name: 'Jenna Hyer',
     credentials: 'NP',
     title: 'Nurse Practitioner',
@@ -897,6 +982,7 @@ export const providers: Provider[] = [
   },
   {
     id: 'tanner-manwaring',
+    image: '/images/providers/tanner-manwaring.jpg',
     name: 'Tanner Manwaring',
     credentials: 'DNP',
     title: 'Nurse Practitioner',
@@ -906,6 +992,7 @@ export const providers: Provider[] = [
   },
   {
     id: 'jenn-zeer',
+    image: '/images/providers/jenn-zeer.jpg',
     name: 'Jenn Zeer',
     credentials: 'NP',
     title: 'Nurse Practitioner',
@@ -917,6 +1004,7 @@ export const providers: Provider[] = [
   // Lehi
   {
     id: 'mah-mekolle',
+    image: '/images/providers/mah-mekolle.jpg',
     name: 'Mah Mekolle',
     credentials: 'NP',
     title: 'Nurse Practitioner',
@@ -926,6 +1014,7 @@ export const providers: Provider[] = [
   },
   {
     id: 'pamela-ziel',
+    image: '/images/providers/pamela-ziel.jpg',
     name: 'Pamela Ziel',
     credentials: 'DNP',
     title: 'Nurse Practitioner',
@@ -937,6 +1026,7 @@ export const providers: Provider[] = [
   // Layton
   {
     id: 'brenda-galvez',
+    image: '/images/providers/brenda-galvez.jpg',
     name: 'Brenda Galvez',
     credentials: 'NP',
     title: 'Nurse Practitioner',
@@ -946,6 +1036,7 @@ export const providers: Provider[] = [
   },
   {
     id: 'bryce-gosney',
+    image: '/images/providers/bryce-gosney.jpg',
     name: 'Bryce Gosney',
     credentials: 'PMHNP',
     title: 'Psychiatric Nurse Practitioner',
@@ -955,6 +1046,7 @@ export const providers: Provider[] = [
   },
   {
     id: 'sarah-samsky',
+    image: '/images/providers/sarah-samsky.jpg',
     name: 'Sarah Samsky',
     credentials: 'DNP',
     title: 'Nurse Practitioner',
@@ -964,6 +1056,7 @@ export const providers: Provider[] = [
   },
   {
     id: 'anthony-vita',
+    image: '/images/providers/anthony-vita.jpg',
     name: 'Anthony Vita',
     credentials: 'MD',
     title: 'Psychiatrist',
@@ -978,6 +1071,7 @@ export const providers: Provider[] = [
   // Fairfax
   {
     id: 'vanessa-freeman',
+    image: '/images/providers/vanessa-freeman.jpg',
     name: 'Vanessa Freeman',
     credentials: 'MD',
     title: 'Psychiatrist',
@@ -987,6 +1081,7 @@ export const providers: Provider[] = [
   },
   {
     id: 'lan-anh-tran',
+    image: '/images/providers/lan-anh-tran.jpg',
     name: 'Lan-Anh Tran',
     credentials: 'DO',
     title: 'Psychiatrist',

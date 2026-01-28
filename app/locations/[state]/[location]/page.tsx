@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import Header from '@/components/shared/Header';
 import Footer from '@/components/shared/Footer';
@@ -315,8 +316,18 @@ export default async function LocationDetailPage({ params }: PageProps) {
                         className="group bg-white rounded-xl p-5 hover:shadow-lg transition-all border border-neutral-100 hover:border-primary-200"
                       >
                         <div className="flex items-center gap-4">
-                          <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-primary-100 to-primary-200 flex items-center justify-center flex-shrink-0">
-                            <User className="w-8 h-8 text-primary-600" />
+                          <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-primary-100 to-primary-200 flex items-center justify-center flex-shrink-0 overflow-hidden">
+                            {provider.image ? (
+                              <Image
+                                src={provider.image}
+                                alt={provider.name}
+                                width={64}
+                                height={64}
+                                className="w-full h-full object-cover"
+                              />
+                            ) : (
+                              <User className="w-8 h-8 text-primary-600" />
+                            )}
                           </div>
                           <div className="min-w-0">
                             <h4 className="text-body-lg font-bold text-neutral-900 group-hover:text-primary-600 transition-colors">
@@ -350,8 +361,18 @@ export default async function LocationDetailPage({ params }: PageProps) {
                         className="group bg-white rounded-xl p-4 hover:shadow-md transition-all border border-neutral-100 hover:border-primary-200"
                       >
                         <div className="flex items-center gap-3">
-                          <div className="w-12 h-12 rounded-lg bg-neutral-100 flex items-center justify-center flex-shrink-0 group-hover:bg-primary-100">
-                            <User className="w-6 h-6 text-neutral-400 group-hover:text-primary-500" />
+                          <div className="w-12 h-12 rounded-lg bg-neutral-100 flex items-center justify-center flex-shrink-0 group-hover:bg-primary-100 overflow-hidden">
+                            {provider.image ? (
+                              <Image
+                                src={provider.image}
+                                alt={provider.name}
+                                width={48}
+                                height={48}
+                                className="w-full h-full object-cover"
+                              />
+                            ) : (
+                              <User className="w-6 h-6 text-neutral-400 group-hover:text-primary-500" />
+                            )}
                           </div>
                           <div className="min-w-0">
                             <h4 className="text-body-md font-bold text-neutral-900 group-hover:text-primary-600 transition-colors truncate">

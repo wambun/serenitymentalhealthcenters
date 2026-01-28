@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import Header from '@/components/shared/Header';
 import Footer from '@/components/shared/Footer';
 import PageHeader from '@/components/page/PageHeader';
@@ -79,8 +80,18 @@ export default function ProvidersPage() {
                     className="group bg-white rounded-2xl p-6 shadow-sm border border-neutral-100 hover:shadow-xl hover:border-primary-200 transition-all"
                   >
                     <div className="flex items-start gap-4">
-                      <div className="w-20 h-20 rounded-xl bg-gradient-to-br from-primary-100 to-primary-200 flex items-center justify-center flex-shrink-0">
-                        <User className="w-10 h-10 text-primary-600" />
+                      <div className="w-20 h-20 rounded-xl bg-gradient-to-br from-primary-100 to-primary-200 flex items-center justify-center flex-shrink-0 overflow-hidden">
+                        {provider.image ? (
+                          <Image
+                            src={provider.image}
+                            alt={provider.name}
+                            width={80}
+                            height={80}
+                            className="w-full h-full object-cover"
+                          />
+                        ) : (
+                          <User className="w-10 h-10 text-primary-600" />
+                        )}
                       </div>
                       <div className="flex-1 min-w-0">
                         <h3 className="text-heading-md font-bold text-neutral-900 group-hover:text-primary-600 transition-colors">
@@ -148,8 +159,18 @@ export default function ProvidersPage() {
                     className="group bg-neutral-50 rounded-xl p-4 hover:bg-primary-50 transition-colors border border-neutral-100 hover:border-primary-200"
                   >
                     <div className="flex items-center gap-3">
-                      <div className="w-12 h-12 rounded-lg bg-white flex items-center justify-center flex-shrink-0 border border-neutral-200 group-hover:border-primary-200">
-                        <User className="w-6 h-6 text-neutral-400 group-hover:text-primary-500" />
+                      <div className="w-12 h-12 rounded-lg bg-white flex items-center justify-center flex-shrink-0 border border-neutral-200 group-hover:border-primary-200 overflow-hidden">
+                        {provider.image ? (
+                          <Image
+                            src={provider.image}
+                            alt={provider.name}
+                            width={48}
+                            height={48}
+                            className="w-full h-full object-cover"
+                          />
+                        ) : (
+                          <User className="w-6 h-6 text-neutral-400 group-hover:text-primary-500" />
+                        )}
                       </div>
                       <div className="min-w-0">
                         <h3 className="text-body-md font-bold text-neutral-900 group-hover:text-primary-600 transition-colors truncate">
@@ -194,8 +215,18 @@ export default function ProvidersPage() {
                     className="group bg-white rounded-xl p-4 hover:bg-primary-50 transition-colors border border-neutral-100 hover:border-primary-200"
                   >
                     <div className="flex items-center gap-3">
-                      <div className="w-12 h-12 rounded-lg bg-neutral-50 flex items-center justify-center flex-shrink-0 border border-neutral-200 group-hover:border-primary-200">
-                        <User className="w-6 h-6 text-neutral-400 group-hover:text-primary-500" />
+                      <div className="w-12 h-12 rounded-lg bg-neutral-50 flex items-center justify-center flex-shrink-0 border border-neutral-200 group-hover:border-primary-200 overflow-hidden">
+                        {provider.image ? (
+                          <Image
+                            src={provider.image}
+                            alt={provider.name}
+                            width={48}
+                            height={48}
+                            className="w-full h-full object-cover"
+                          />
+                        ) : (
+                          <User className="w-6 h-6 text-neutral-400 group-hover:text-primary-500" />
+                        )}
                       </div>
                       <div className="min-w-0">
                         <h3 className="text-body-md font-bold text-neutral-900 group-hover:text-primary-600 transition-colors truncate">
