@@ -92,7 +92,7 @@ const Footer = () => {
             </p>
             <div className="flex items-center gap-6">
               <Link
-                href="/privacy"
+                href="/privacy-policy"
                 className="text-sm text-neutral-400 hover:text-neutral-200 transition-colors"
               >
                 Privacy Policy
