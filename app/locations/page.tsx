@@ -1,6 +1,5 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import Image from 'next/image';
 import Header from '@/components/shared/Header';
 import Footer from '@/components/shared/Footer';
 import PageHeader from '@/components/page/PageHeader';
@@ -65,113 +64,119 @@ export default function LocationsPage() {
             </div>
 
             <div className="space-y-8">
-              {states.map((state) => (
-                <div
-                  key={state.id}
-                  className="bg-white rounded-2xl border border-neutral-200 overflow-hidden hover:shadow-lg transition-shadow"
-                >
-                  <div className="grid lg:grid-cols-3">
-                    {/* State Image or Gradient */}
-                    <div className="relative h-48 lg:h-auto lg:min-h-[280px]">
-                      {state.image ? (
-                        <Image
-                          src={state.image}
-                          alt={`${state.name} location`}
-                          fill
-                          className="object-cover"
-                        />
-                      ) : (
-                        <div className="absolute inset-0 bg-gradient-to-br from-primary-400 to-primary-600 flex items-center justify-center">
-                          <div className="text-center text-white">
-                            <MapPin className="w-12 h-12 mx-auto mb-2 opacity-50" />
-                            <span className="text-2xl font-bold">{state.abbreviation}</span>
+              {states.map((state, index) => {
+                // Alternate gradient directions for visual variety
+                const gradients = [
+                  'from-primary-500 via-primary-600 to-primary-700',
+                  'from-primary-600 via-primary-500 to-primary-600',
+                  'from-primary-700 via-primary-600 to-primary-500',
+                  'from-primary-500 to-primary-700',
+                ];
+                const gradient = gradients[index % gradients.length];
+
+                return (
+                  <div
+                    key={state.id}
+                    className="bg-white rounded-2xl border border-neutral-200 overflow-hidden hover:shadow-lg transition-shadow"
+                  >
+                    <div className="grid lg:grid-cols-3">
+                      {/* State Gradient Card */}
+                      <div className={`relative h-48 lg:h-auto lg:min-h-[280px] bg-gradient-to-br ${gradient} flex items-center justify-center`}>
+                        {/* Decorative pattern overlay */}
+                        <div className="absolute inset-0 opacity-10">
+                          <div className="absolute top-4 left-4 w-24 h-24 border-2 border-white rounded-full" />
+                          <div className="absolute bottom-4 right-4 w-32 h-32 border-2 border-white rounded-full" />
+                          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 border border-white rounded-full" />
+                        </div>
+
+                        {/* State Info */}
+                        <div className="relative z-10 text-center text-white p-6">
+                          <div className="text-7xl lg:text-8xl font-bold tracking-tight opacity-90">
+                            {state.abbreviation}
+                          </div>
+                          <div className="mt-2 text-xl lg:text-2xl font-semibold">
+                            {state.name}
+                          </div>
+                          <div className="mt-2 inline-flex items-center gap-2 px-4 py-1.5 bg-white/20 backdrop-blur-sm rounded-full text-sm font-medium">
+                            <MapPin className="w-4 h-4" aria-hidden="true" />
+                            {state.locations.length} {state.locations.length === 1 ? 'location' : 'locations'}
                           </div>
                         </div>
-                      )}
-                      {/* State overlay */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-                      <div className="absolute bottom-0 left-0 right-0 p-6">
-                        <h3 className="text-2xl font-bold text-white">
-                          {state.name}
-                        </h3>
-                        <p className="text-white/80 text-sm mt-1">
-                          {state.locations.length} {state.locations.length === 1 ? 'location' : 'locations'}
-                        </p>
                       </div>
-                    </div>
 
-                    {/* Locations */}
-                    <div className="lg:col-span-2 p-6 lg:p-8">
-                      <div className="grid sm:grid-cols-2 gap-4">
-                        {state.locations.map((location) => (
-                          <div
-                            key={location.id}
-                            className="p-5 bg-neutral-50 rounded-xl hover:bg-primary-50 transition-colors group"
-                          >
-                            <h4 className="text-heading-md font-semibold text-neutral-900 group-hover:text-primary-600 transition-colors">
-                              {location.name}
-                            </h4>
+                      {/* Locations */}
+                      <div className="lg:col-span-2 p-6 lg:p-8">
+                        <div className="grid sm:grid-cols-2 gap-4">
+                          {state.locations.map((location) => (
+                            <div
+                              key={location.id}
+                              className="p-5 bg-neutral-50 rounded-xl hover:bg-primary-50 transition-colors group"
+                            >
+                              <h4 className="text-heading-md font-semibold text-neutral-900 group-hover:text-primary-600 transition-colors">
+                                {location.name}
+                              </h4>
 
-                            <div className="mt-3 space-y-2">
-                              {location.address && (
-                                <div className="flex items-start gap-2 text-body-sm text-neutral-600">
-                                  <MapPin className="w-4 h-4 text-primary-500 flex-shrink-0 mt-0.5" />
-                                  <span>
-                                    {location.address}
-                                    <br />
-                                    {location.city}, {state.abbreviation} {location.zip}
-                                  </span>
-                                </div>
-                              )}
-                              <div className="flex items-center gap-2 text-body-sm text-neutral-600">
-                                <Phone className="w-4 h-4 text-primary-500 flex-shrink-0" />
-                                <a
-                                  href={`tel:${location.phone}`}
-                                  className="hover:text-primary-600 transition-colors font-medium"
-                                >
-                                  {location.phone}
-                                </a>
-                              </div>
-                              {location.hours && (
+                              <div className="mt-3 space-y-2">
+                                {location.address && (
+                                  <div className="flex items-start gap-2 text-body-sm text-neutral-600">
+                                    <MapPin className="w-4 h-4 text-primary-500 flex-shrink-0 mt-0.5" aria-hidden="true" />
+                                    <span>
+                                      {location.address}
+                                      <br />
+                                      {location.city}, {state.abbreviation} {location.zip}
+                                    </span>
+                                  </div>
+                                )}
                                 <div className="flex items-center gap-2 text-body-sm text-neutral-600">
-                                  <Clock className="w-4 h-4 text-primary-500 flex-shrink-0" />
-                                  <span>{location.hours}</span>
-                                </div>
-                              )}
-                            </div>
-
-                            {location.services && location.services.length > 0 && (
-                              <div className="mt-3 flex flex-wrap gap-1.5">
-                                {location.services.slice(0, 3).map((service) => (
-                                  <span
-                                    key={service}
-                                    className="px-2 py-0.5 bg-white rounded-full text-xs text-neutral-600 border border-neutral-200"
+                                  <Phone className="w-4 h-4 text-primary-500 flex-shrink-0" aria-hidden="true" />
+                                  <a
+                                    href={`tel:${location.phone}`}
+                                    className="hover:text-primary-600 transition-colors font-medium"
                                   >
-                                    {service}
-                                  </span>
-                                ))}
-                                {location.services.length > 3 && (
-                                  <span className="px-2 py-0.5 text-xs text-neutral-500">
-                                    +{location.services.length - 3} more
-                                  </span>
+                                    {location.phone}
+                                  </a>
+                                </div>
+                                {location.hours && (
+                                  <div className="flex items-center gap-2 text-body-sm text-neutral-600">
+                                    <Clock className="w-4 h-4 text-primary-500 flex-shrink-0" aria-hidden="true" />
+                                    <span>{location.hours}</span>
+                                  </div>
                                 )}
                               </div>
-                            )}
 
-                            <Link
-                              href="/appointment"
-                              className="inline-flex items-center gap-1.5 mt-4 text-body-sm font-medium text-primary-500 hover:text-primary-600"
-                            >
-                              Book appointment
-                              <ArrowRight className="w-3.5 h-3.5" />
-                            </Link>
-                          </div>
-                        ))}
+                              {location.services && location.services.length > 0 && (
+                                <div className="mt-3 flex flex-wrap gap-1.5">
+                                  {location.services.slice(0, 3).map((service) => (
+                                    <span
+                                      key={service}
+                                      className="px-2 py-0.5 bg-white rounded-full text-xs text-neutral-600 border border-neutral-200"
+                                    >
+                                      {service}
+                                    </span>
+                                  ))}
+                                  {location.services.length > 3 && (
+                                    <span className="px-2 py-0.5 text-xs text-neutral-500">
+                                      +{location.services.length - 3} more
+                                    </span>
+                                  )}
+                                </div>
+                              )}
+
+                              <Link
+                                href="/appointment"
+                                className="inline-flex items-center gap-1.5 mt-4 text-body-sm font-medium text-primary-500 hover:text-primary-600"
+                              >
+                                Book appointment
+                                <ArrowRight className="w-3.5 h-3.5" aria-hidden="true" />
+                              </Link>
+                            </div>
+                          ))}
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </section>
@@ -189,10 +194,10 @@ export default function LocationsPage() {
               <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center gap-2 px-8 py-4 text-body-md font-medium text-primary-600 bg-white rounded-full hover:bg-primary-50 transition-colors"
+                  className="inline-flex items-center justify-center gap-2 px-8 py-4 text-body-md font-medium text-primary-600 bg-white rounded-full hover:bg-primary-50 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary-500 transition-colors"
                 >
                   Contact Us
-                  <ArrowRight className="w-5 h-5" />
+                  <ArrowRight className="w-5 h-5" aria-hidden="true" />
                 </Link>
                 <a
                   href="tel:844-310-1649"

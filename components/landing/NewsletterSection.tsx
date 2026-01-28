@@ -26,15 +26,15 @@ const NewsletterSection = () => {
           <h2 className="text-3xl sm:text-4xl font-bold text-white">
             Subscribe to Our Newsletter
           </h2>
-          <p className="mt-4 text-lg text-white/80 max-w-xl mx-auto">
+          <p className="mt-4 text-lg text-white max-w-xl mx-auto">
             Stay informed about mental health tips, treatment updates, and
             wellness resources delivered to your inbox.
           </p>
 
           <div className="mt-8">
             {isSubmitted ? (
-              <div className="inline-flex items-center justify-center gap-3 p-4 bg-white/10 rounded-full">
-                <CheckCircle2 className="w-6 h-6 text-white" />
+              <div className="inline-flex items-center justify-center gap-3 p-4 bg-white/10 rounded-full" role="status" aria-live="polite">
+                <CheckCircle2 className="w-6 h-6 text-white" aria-hidden="true" />
                 <span className="text-white font-medium">
                   Thank you for subscribing!
                 </span>
@@ -44,25 +44,32 @@ const NewsletterSection = () => {
                 onSubmit={handleSubmit}
                 className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto"
               >
+                <label htmlFor="newsletter-email" className="sr-only">
+                  Email address
+                </label>
                 <input
+                  id="newsletter-email"
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Enter your email"
                   required
-                  className="flex-1 px-6 py-4 rounded-full bg-white/10 border border-white/20 text-white placeholder-white/60 focus:outline-none focus:border-white/40 transition-colors"
+                  aria-required="true"
+                  aria-label="Email address for newsletter subscription"
+                  className="flex-1 px-6 py-4 rounded-full bg-white/10 border border-white/20 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary-500 transition-colors"
                 />
                 <button
                   type="submit"
                   disabled={isLoading}
-                  className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-primary-600 font-medium rounded-full hover:bg-neutral-100 transition-colors disabled:opacity-70"
+                  aria-label={isLoading ? 'Subscribing to newsletter' : 'Subscribe to newsletter'}
+                  className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-primary-600 font-medium rounded-full hover:bg-neutral-100 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary-500 transition-colors disabled:opacity-70"
                 >
                   {isLoading ? (
                     'Subscribing...'
                   ) : (
                     <>
                       Subscribe
-                      <Send className="w-4 h-4" />
+                      <Send className="w-4 h-4" aria-hidden="true" />
                     </>
                   )}
                 </button>
@@ -70,7 +77,7 @@ const NewsletterSection = () => {
             )}
           </div>
 
-          <p className="mt-4 text-sm text-white/60">
+          <p className="mt-4 text-sm text-white/90">
             We respect your privacy. Unsubscribe at any time.
           </p>
         </div>

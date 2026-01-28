@@ -68,7 +68,7 @@ export default function ContactPage() {
                   className="p-6 bg-white rounded-2xl border border-neutral-200 hover:border-primary-300 hover:shadow-lg transition-all"
                 >
                   <div className="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center">
-                    <method.icon className="w-6 h-6 text-primary-600" />
+                    <method.icon className="w-6 h-6 text-primary-600" aria-hidden="true" />
                   </div>
                   <h3 className="mt-4 text-heading-lg font-semibold text-neutral-900">
                     {method.title}
@@ -82,7 +82,7 @@ export default function ContactPage() {
                         className="inline-flex items-center mt-4 text-body-sm font-medium text-primary-500 hover:text-primary-600"
                       >
                         {method.actionText}
-                        <span className="ml-1">→</span>
+                        <span className="ml-1" aria-hidden="true">→</span>
                       </Link>
                     ) : (
                       <a
@@ -90,7 +90,7 @@ export default function ContactPage() {
                         className="inline-flex items-center mt-4 text-body-sm font-medium text-primary-500 hover:text-primary-600"
                       >
                         {method.actionText}
-                        <span className="ml-1">→</span>
+                        <span className="ml-1" aria-hidden="true">→</span>
                       </a>
                     )
                   )}
@@ -220,7 +220,8 @@ export default function ContactPage() {
 
                   <button
                     type="submit"
-                    className="w-full sm:w-auto px-8 py-4 bg-primary-500 text-white font-medium rounded-full hover:bg-primary-600 transition-colors"
+                    aria-label="Send message"
+                    className="w-full sm:w-auto px-8 py-4 bg-primary-500 text-white font-medium rounded-full hover:bg-primary-600 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 transition-colors"
                   >
                     Send Message
                   </button>
@@ -231,7 +232,7 @@ export default function ContactPage() {
               <div className="lg:pl-12">
                 <div className="bg-neutral-50 rounded-2xl p-8">
                   <div className="w-14 h-14 bg-primary-100 rounded-xl flex items-center justify-center mb-6">
-                    <MessageCircle className="w-7 h-7 text-primary-600" />
+                    <MessageCircle className="w-7 h-7 text-primary-600" aria-hidden="true" />
                   </div>
                   <h3 className="text-heading-xl font-bold text-neutral-900">
                     Need Immediate Help?

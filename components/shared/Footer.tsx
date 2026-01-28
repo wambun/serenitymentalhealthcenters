@@ -30,7 +30,7 @@ const Footer = () => {
                 </span>
               </div>
             </Link>
-            <p className="text-neutral-400 text-sm mb-6 max-w-sm">
+            <p className="text-neutral-300 text-sm mb-6 max-w-sm">
               Giving you mental healing and overall wellness in our best-in-class
               clinics. Personalized treatment plans with highly trained
               professionals.
@@ -40,18 +40,18 @@ const Footer = () => {
                 href="tel:844-310-1649"
                 className="flex items-center gap-3 text-neutral-300 hover:text-primary-400 transition-colors"
               >
-                <Phone className="w-4 h-4" />
+                <Phone className="w-4 h-4" aria-hidden="true" />
                 <span className="text-sm">844-310-1649</span>
               </a>
               <a
                 href="mailto:info@serenitymentalhealthcenters.com"
                 className="flex items-center gap-3 text-neutral-300 hover:text-primary-400 transition-colors"
               >
-                <Mail className="w-4 h-4" />
+                <Mail className="w-4 h-4" aria-hidden="true" />
                 <span className="text-sm">info@serenitymentalhealthcenters.com</span>
               </a>
               <div className="flex items-start gap-3 text-neutral-300">
-                <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" aria-hidden="true" />
                 <span className="text-sm">
                   Serving AZ, CO, FL, GA, NV, TX, UT, VA
                 </span>
@@ -70,7 +70,7 @@ const Footer = () => {
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="text-sm text-neutral-400 hover:text-primary-400 transition-colors"
+                      className="text-sm text-neutral-300 hover:text-primary-400 transition-colors"
                     >
                       {link.title}
                     </Link>
@@ -86,20 +86,20 @@ const Footer = () => {
       <div className="border-t border-neutral-700">
         <div className="w-full px-4 sm:px-6 lg:px-12 py-6">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-            <p className="text-sm text-neutral-500">
+            <p className="text-sm text-neutral-400">
               &copy; {currentYear} Serenity Mental Health Centers. All rights
               reserved.
             </p>
             <div className="flex items-center gap-6">
               <Link
                 href="/privacy"
-                className="text-sm text-neutral-500 hover:text-neutral-300 transition-colors"
+                className="text-sm text-neutral-400 hover:text-neutral-200 transition-colors"
               >
                 Privacy Policy
               </Link>
               <Link
                 href="/terms"
-                className="text-sm text-neutral-500 hover:text-neutral-300 transition-colors"
+                className="text-sm text-neutral-400 hover:text-neutral-200 transition-colors"
               >
                 Terms of Service
               </Link>

@@ -46,7 +46,7 @@ const Hero = () => {
               transition={{ duration: 0.6, ease: [0.33, 1, 0.68, 1] }}
               className="inline-flex items-center gap-2 px-4 py-2 bg-primary-100/80 backdrop-blur-sm rounded-full border border-primary-200/50 mb-6"
             >
-              <Sparkles className="w-4 h-4 text-primary-600" />
+              <Sparkles className="w-4 h-4 text-primary-600" aria-hidden="true" />
               <span className="text-sm font-medium text-primary-700">
                 Evidence-Based Mental Health Care
               </span>
@@ -122,7 +122,7 @@ const Hero = () => {
                       stiffness: 200,
                     }}
                   >
-                    <Star className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                    <Star className="w-5 h-5 fill-yellow-400 text-yellow-400" aria-hidden="true" />
                   </motion.div>
                 ))}
                 <span className="ml-2 text-body-sm font-medium text-neutral-700">
@@ -149,10 +149,10 @@ const Hero = () => {
               >
                 <Link
                   href="/appointment"
-                  className="group inline-flex items-center justify-center gap-2 px-8 py-4 text-body-md font-medium text-white bg-primary-500 rounded-full hover:bg-primary-600 transition-all shadow-lg shadow-primary-500/25 hover:shadow-xl hover:shadow-primary-500/30"
+                  className="group inline-flex items-center justify-center gap-2 px-8 py-4 text-body-md font-medium text-white bg-primary-500 rounded-full hover:bg-primary-600 focus:outline-none focus:ring-2 focus:ring-primary-400 focus:ring-offset-2 transition-all shadow-lg shadow-primary-500/25 hover:shadow-xl hover:shadow-primary-500/30"
                 >
                   Get Started
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
                 </Link>
               </motion.div>
               <motion.div
@@ -162,7 +162,7 @@ const Hero = () => {
               >
                 <Link
                   href="/treatments"
-                  className="inline-flex items-center justify-center gap-2 px-8 py-4 text-body-md font-medium text-neutral-700 bg-white/80 backdrop-blur-sm border border-neutral-200 rounded-full hover:border-primary-500 hover:text-primary-600 transition-colors"
+                  className="inline-flex items-center justify-center gap-2 px-8 py-4 text-body-md font-medium text-neutral-700 bg-white/80 backdrop-blur-sm border border-neutral-200 rounded-full hover:border-primary-500 hover:text-primary-600 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 transition-colors"
                 >
                   Explore Treatments
                 </Link>
@@ -215,6 +215,7 @@ const Hero = () => {
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
+                      aria-hidden="true"
                     >
                       <path
                         strokeLinecap="round"
@@ -244,6 +245,7 @@ const Hero = () => {
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
+                      aria-hidden="true"
                     >
                       <path
                         strokeLinecap="round"

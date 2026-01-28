@@ -30,7 +30,7 @@ const CTASection = () => {
             Take the First Step Toward Healing
           </motion.h2>
           <motion.p
-            className="mt-6 text-lg text-neutral-400 max-w-2xl mx-auto"
+            className="mt-6 text-lg text-neutral-300 max-w-2xl mx-auto"
             initial={{ y: 20, opacity: 0 }}
             animate={isInView ? { y: 0, opacity: 1 } : { y: 20, opacity: 0 }}
             transition={{ duration: 0.5, delay: 0.2, ease: [0.33, 1, 0.68, 1] }}
@@ -53,9 +53,9 @@ const CTASection = () => {
             >
               <Link
                 href="/appointment"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-medium text-white bg-primary-500 rounded-full hover:bg-primary-600 transition-colors"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-medium text-white bg-primary-500 rounded-full hover:bg-primary-600 focus:outline-none focus:ring-2 focus:ring-primary-400 focus:ring-offset-2 focus:ring-offset-neutral-900 transition-colors"
               >
-                <Calendar className="w-5 h-5" />
+                <Calendar className="w-5 h-5" aria-hidden="true" />
                 Schedule Consultation
               </Link>
             </motion.div>
@@ -66,9 +66,9 @@ const CTASection = () => {
             >
               <a
                 href="tel:844-310-1649"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-medium text-white border-2 border-neutral-700 rounded-full hover:border-primary-500 hover:text-primary-400 transition-colors"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-medium text-white border-2 border-neutral-700 rounded-full hover:border-primary-500 hover:text-primary-400 focus:outline-none focus:ring-2 focus:ring-primary-400 focus:ring-offset-2 focus:ring-offset-neutral-900 transition-colors"
               >
-                <Phone className="w-5 h-5" />
+                <Phone className="w-5 h-5" aria-hidden="true" />
                 Call 844-310-1649
               </a>
             </motion.div>
@@ -97,7 +97,7 @@ const CTASection = () => {
                 }}
               >
                 <div className="text-2xl font-bold text-white">{item.value}</div>
-                <div className="mt-1 text-sm text-neutral-500">{item.label}</div>
+                <div className="mt-1 text-sm text-neutral-400">{item.label}</div>
               </motion.div>
             ))}
           </motion.div>

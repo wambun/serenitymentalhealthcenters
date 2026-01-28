@@ -31,7 +31,7 @@ export default function AppointmentPage() {
               {/* Left Content */}
               <div className="lg:sticky lg:top-32">
                 <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary-100 rounded-full mb-6">
-                  <Clock className="w-4 h-4 text-primary-600" />
+                  <Clock className="w-4 h-4 text-primary-600" aria-hidden="true" />
                   <span className="text-body-sm font-medium text-primary-600">
                     Quick & Easy Scheduling
                   </span>
@@ -49,7 +49,7 @@ export default function AppointmentPage() {
                 <ul className="mt-8 space-y-4">
                   {benefits.map((benefit, index) => (
                     <li key={index} className="flex items-center gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-primary-500 flex-shrink-0" />
+                      <CheckCircle2 className="w-5 h-5 text-primary-500 flex-shrink-0" aria-hidden="true" />
                       <span className="text-body-md text-neutral-700">{benefit}</span>
                     </li>
                   ))}
@@ -58,7 +58,7 @@ export default function AppointmentPage() {
                 <div className="mt-10 p-6 bg-white rounded-2xl border border-neutral-200">
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                      <Phone className="w-6 h-6 text-primary-600" />
+                      <Phone className="w-6 h-6 text-primary-600" aria-hidden="true" />
                     </div>
                     <div>
                       <p className="text-body-sm text-neutral-600">Prefer to call?</p>
@@ -73,7 +73,7 @@ export default function AppointmentPage() {
                 </div>
 
                 <div className="mt-6 flex items-center gap-2 text-body-sm text-neutral-500">
-                  <Shield className="w-4 h-4" />
+                  <Shield className="w-4 h-4" aria-hidden="true" />
                   <span>Your information is secure and confidential</span>
                 </div>
               </div>
@@ -100,13 +100,15 @@ export default function AppointmentPage() {
                           htmlFor="firstName"
                           className="block text-body-sm font-medium text-neutral-700"
                         >
-                          First Name <span className="text-red-500">*</span>
+                          First Name <span className="text-red-500" aria-hidden="true">*</span>
+                          <span className="sr-only">(required)</span>
                         </label>
                         <input
                           type="text"
                           id="firstName"
                           name="firstName"
                           required
+                          aria-required="true"
                           className="mt-2 w-full px-4 py-3 border border-neutral-300 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors"
                           placeholder="John"
                         />
@@ -116,13 +118,15 @@ export default function AppointmentPage() {
                           htmlFor="lastName"
                           className="block text-body-sm font-medium text-neutral-700"
                         >
-                          Last Name <span className="text-red-500">*</span>
+                          Last Name <span className="text-red-500" aria-hidden="true">*</span>
+                          <span className="sr-only">(required)</span>
                         </label>
                         <input
                           type="text"
                           id="lastName"
                           name="lastName"
                           required
+                          aria-required="true"
                           className="mt-2 w-full px-4 py-3 border border-neutral-300 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors"
                           placeholder="Doe"
                         />
@@ -135,13 +139,15 @@ export default function AppointmentPage() {
                           htmlFor="email"
                           className="block text-body-sm font-medium text-neutral-700"
                         >
-                          Email Address <span className="text-red-500">*</span>
+                          Email Address <span className="text-red-500" aria-hidden="true">*</span>
+                          <span className="sr-only">(required)</span>
                         </label>
                         <input
                           type="email"
                           id="email"
                           name="email"
                           required
+                          aria-required="true"
                           className="mt-2 w-full px-4 py-3 border border-neutral-300 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors"
                           placeholder="john@example.com"
                         />
@@ -151,13 +157,15 @@ export default function AppointmentPage() {
                           htmlFor="phone"
                           className="block text-body-sm font-medium text-neutral-700"
                         >
-                          Phone Number <span className="text-red-500">*</span>
+                          Phone Number <span className="text-red-500" aria-hidden="true">*</span>
+                          <span className="sr-only">(required)</span>
                         </label>
                         <input
                           type="tel"
                           id="phone"
                           name="phone"
                           required
+                          aria-required="true"
                           className="mt-2 w-full px-4 py-3 border border-neutral-300 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors"
                           placeholder="(555) 123-4567"
                         />
@@ -169,13 +177,15 @@ export default function AppointmentPage() {
                         htmlFor="dob"
                         className="block text-body-sm font-medium text-neutral-700"
                       >
-                        Date of Birth <span className="text-red-500">*</span>
+                        Date of Birth <span className="text-red-500" aria-hidden="true">*</span>
+                        <span className="sr-only">(required)</span>
                       </label>
                       <input
                         type="date"
                         id="dob"
                         name="dob"
                         required
+                        aria-required="true"
                         className="mt-2 w-full px-4 py-3 border border-neutral-300 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors"
                       />
                     </div>
@@ -192,12 +202,14 @@ export default function AppointmentPage() {
                         htmlFor="location"
                         className="block text-body-sm font-medium text-neutral-700"
                       >
-                        Preferred Location <span className="text-red-500">*</span>
+                        Preferred Location <span className="text-red-500" aria-hidden="true">*</span>
+                        <span className="sr-only">(required)</span>
                       </label>
                       <select
                         id="location"
                         name="location"
                         required
+                        aria-required="true"
                         className="mt-2 w-full px-4 py-3 border border-neutral-300 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors bg-white"
                       >
                         <option value="">Select a location</option>
@@ -347,11 +359,14 @@ export default function AppointmentPage() {
                         <input
                           type="checkbox"
                           name="consent"
+                          id="consent"
                           required
+                          aria-required="true"
                           className="mt-1 w-4 h-4 text-primary-500 border-neutral-300 rounded focus:ring-primary-500"
                         />
                         <span className="text-body-sm text-neutral-600">
-                          I consent to receiving communications from Serenity Mental Health Centers regarding my appointment request. I understand that my information will be kept confidential. <span className="text-red-500">*</span>
+                          I consent to receiving communications from Serenity Mental Health Centers regarding my appointment request. I understand that my information will be kept confidential. <span className="text-red-500" aria-hidden="true">*</span>
+                          <span className="sr-only">(required)</span>
                         </span>
                       </label>
                     </div>
@@ -359,15 +374,16 @@ export default function AppointmentPage() {
 
                   <button
                     type="submit"
-                    className="w-full px-8 py-4 bg-primary-500 text-white font-medium rounded-full hover:bg-primary-600 transition-colors flex items-center justify-center gap-2"
+                    aria-label="Request an appointment"
+                    className="w-full px-8 py-4 bg-primary-500 text-white font-medium rounded-full hover:bg-primary-600 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 transition-colors flex items-center justify-center gap-2"
                   >
                     Request Appointment
-                    <ArrowRight className="w-5 h-5" />
+                    <ArrowRight className="w-5 h-5" aria-hidden="true" />
                   </button>
 
                   <p className="text-center text-body-sm text-neutral-500">
                     By submitting this form, you agree to our{' '}
-                    <a href="#" className="text-primary-500 hover:underline">
+                    <a href="/privacy-policy" className="text-primary-500 hover:underline">
                       Privacy Policy
                     </a>
                   </p>
