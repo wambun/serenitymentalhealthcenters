@@ -8,6 +8,7 @@ import { colors } from '@/data/config/colors.js';
 import '@/css/globals.css';
 import { SearchProvider } from '@/components/shared/SearchProvider';
 import { AnalyticsWrapper } from '@/components/shared/Analytics';
+import { OrganizationSchema } from '@/components/seo/StructuredData';
 
 const displayFont = Inter({
   subsets: ['latin'],
@@ -129,6 +130,7 @@ export default function RootLayout({
           content="#000"
         />
         <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
+        <OrganizationSchema />
       </head>
 
       <body className="flex flex-col bg-white text-black antialiased dark:bg-gray-950 dark:text-white min-h-screen">

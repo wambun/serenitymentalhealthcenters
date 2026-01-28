@@ -6,6 +6,8 @@ import Header from '@/components/shared/Header';
 import Footer from '@/components/shared/Footer';
 import { states, getStateBySlug, getLocationById } from '@/data/locations';
 import { getProvidersByLocation } from '@/data/providers';
+import { LocationSchema, BreadcrumbSchema } from '@/components/seo/StructuredData';
+import { siteConfig } from '@/data/config/site.settings';
 import {
   MapPin,
   Phone,
@@ -87,6 +89,25 @@ export default async function LocationDetailPage({ params }: PageProps) {
 
   return (
     <>
+      <LocationSchema
+        name={location.name}
+        address={location.address}
+        city={location.city}
+        state={location.state}
+        zip={location.zip}
+        phone={location.phone}
+        hours={location.hours}
+        stateId={state.id}
+        locationId={location.id}
+      />
+      <BreadcrumbSchema
+        items={[
+          { name: 'Home', url: siteConfig.siteUrl },
+          { name: 'Locations', url: `${siteConfig.siteUrl}/locations` },
+          { name: state.name, url: `${siteConfig.siteUrl}/locations/${state.id}` },
+          { name: location.name, url: `${siteConfig.siteUrl}/locations/${state.id}/${location.id}` },
+        ]}
+      />
       <Header />
       <main>
         {/* Breadcrumb */}

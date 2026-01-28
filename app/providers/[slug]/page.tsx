@@ -6,6 +6,8 @@ import Header from '@/components/shared/Header';
 import Footer from '@/components/shared/Footer';
 import { providers, getProviderById, getProvidersByLocation } from '@/data/providers';
 import { getLocationById, states } from '@/data/locations';
+import { ProviderSchema, BreadcrumbSchema } from '@/components/seo/StructuredData';
+import { siteConfig } from '@/data/config/site.settings';
 import {
   User,
   MapPin,
@@ -79,6 +81,21 @@ export default async function ProviderProfilePage({ params }: PageProps) {
 
   return (
     <>
+      <ProviderSchema
+        name={provider.name}
+        credentials={provider.credentials}
+        title={provider.title}
+        image={provider.image}
+        specialties={provider.specialties}
+        slug={provider.id}
+      />
+      <BreadcrumbSchema
+        items={[
+          { name: 'Home', url: siteConfig.siteUrl },
+          { name: 'Providers', url: `${siteConfig.siteUrl}/providers` },
+          { name: `${provider.name}, ${provider.credentials}`, url: `${siteConfig.siteUrl}/providers/${provider.id}` },
+        ]}
+      />
       <Header />
       <main>
         {/* Breadcrumb */}
