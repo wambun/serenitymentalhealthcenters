@@ -9,6 +9,7 @@ import '@/css/globals.css';
 import { SearchProvider } from '@/components/shared/SearchProvider';
 import { AnalyticsWrapper } from '@/components/shared/Analytics';
 import { OrganizationSchema } from '@/components/seo/StructuredData';
+import { Analytics } from '@vercel/analytics/next';
 
 const displayFont = Inter({
   subsets: ['latin'],
@@ -153,6 +154,7 @@ export default function RootLayout({
             </SearchProvider>
           </div>
         </ThemeProviders>
+        <Analytics />
       </body>
     </html>
   );
