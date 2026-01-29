@@ -1,16 +1,13 @@
 'use client';
 
-import { Analytics } from '@shipixen/pliny/analytics';
-import { siteConfig } from '@/data/config/site.settings';
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 export const AnalyticsWrapper = () => {
-    const analyticsConfig = siteConfig.analytics;
-
-    if (!analyticsConfig) {
-        return null;
-    }
-
-    return (
-        <Analytics analyticsConfig={analyticsConfig} />
-    );
+  return (
+    <>
+      <Analytics />
+      <SpeedInsights />
+    </>
+  );
 };
