@@ -7,9 +7,9 @@ import { colors } from '@/data/config/colors.js';
 
 import '@/css/globals.css';
 import { SearchProvider } from '@/components/shared/SearchProvider';
-import { AnalyticsWrapper } from '@/components/shared/Analytics';
 import { OrganizationSchema } from '@/components/seo/StructuredData';
-import { Analytics } from '@vercel/analytics/next';
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 const displayFont = Inter({
   subsets: ['latin'],
@@ -144,8 +144,6 @@ export default function RootLayout({
         </a>
 
         <ThemeProviders>
-          <AnalyticsWrapper />
-
           <div className="w-full flex flex-col justify-between items-center font-sans">
             <SearchProvider>
               <main id="main-content" className="w-full flex flex-col items-center mb-auto" tabIndex={-1}>
@@ -155,6 +153,7 @@ export default function RootLayout({
           </div>
         </ThemeProviders>
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
