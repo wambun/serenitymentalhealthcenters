@@ -8,7 +8,7 @@ import { colors } from '@/data/config/colors.js';
 import '@/css/globals.css';
 import { SearchProvider } from '@/components/shared/SearchProvider';
 import { OrganizationSchema } from '@/components/seo/StructuredData';
-import { Analytics } from '@vercel/analytics/react';
+import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/react';
 
 const displayFont = Inter({
